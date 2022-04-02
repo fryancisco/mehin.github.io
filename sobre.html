@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script src = "https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                <div class = "dropdown is-pulled-left">
+                    <div class = "dropdown-trigger">
+                        <button class = "button" aria-haspopup = "true" aria-controls = "dropdown-menu">
+                        <span>Menu</span>
+                        <span class = "icon is-small">
+                        <i class = "fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                    </div>
+                    <div class = "dropdown-menu" id = "dropdown-menu" role = "menu">
+                        <div class = "dropdown-content">
+                            <a href="index.html" class="dropdown-item">Inicio</a>
+                            <a href = "sobre.html" class = "dropdown-item">Sobre</a>
+                            <a href = "https://drive.google.com/file/d/1F1C4ObUzWQtBfxVsIvKSORraw8SKC81N/" class = "dropdown-item">Dicionário Completo</a>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                    <h3 class="title has-text-grey">MEHIN - KUPEN</h3>
+                    <h3 class="title has-text-grey">Tradutor Canela Ramkokamekrá para a Língua Portuguesa.</h3>
+                    <div class="box">
+                        <h3 class="title has-text-black">Sobre</h3>
+                        <p class="has-text-justified">&nbsp;Trata de uma proposta de inovação tecnológica de criação de um aplicativo denominado MEHIN - KUPEN - Dicionário Básico Virtual de Tradução da Língua Canela Ramkokamekrá para a Língua Portuguesa, com o objetivo de contribuir  para a efetividade da Lei 11.645/2008, que define a obrigatoriedade da inserção da história e cultura indígenas no currículo escolar, bem como para possibilitar uma maior interação com os estudantes indígenas da referida etnia, regularmente matriculados no IFMA-Campus Barra do Corda. De forma pormenorizada, esse aplicativo pretende, aproximar estudantes indígenas e não-indígenas do IFMA Campus Barra do Corda, através do conhecimento das palavras básicas e expressões instrumentais da Língua Canela Ramkokamekrá. O referido aplicativo será desenvolvido na plataforma Android Studio e será formatado, também, para utilização off-line após ser instalado no aparelho celular. O referido dicionário terá 500 (quinhentas) palavras de natureza básica instrumental para iniciar o processo de interação linguística intercultural referido povo indígena.</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <script>
+               //DOMContentLoaded - it fires when initial HTML document has been completely loaded
+               document.addEventListener('DOMContentLoaded', function () {
+                  // querySelector - it returns the element within the document that matches the specified selector
+                  var dropdown = document.querySelector('.dropdown');
+                    
+                  //addEventListener - attaches an event handler to the specified element.
+                  dropdown.addEventListener('click', function(event) {
+                    
+                     //event.stopPropagation() - it stops the bubbling of an event to parent elements, by preventing parent event handlers from being executed
+                     event.stopPropagation();
+                      
+                     //classList.toggle - it toggles between adding and removing a class name from an element
+                     dropdown.classList.toggle('is-active');
+                  });
+               });        
+        </script>
+
+</body>
+</html>
