@@ -23,7 +23,9 @@ const CreateTranslate = () => {
 				if(word) {
 					const translateWord = TranslateObj.translate(word) || '';
 					if(translateWord) {
-						alert(`${word} = ${translateWord}`);
+						const traducao = document.getElementById('traducao');
+						traducao.innerHTML = `${word} = ${translateWord}`;
+						traducao.style = 'font-weight: bold;';
 					} else {
 						alert('Palavra não encontrada no dicionário!');
 					}
