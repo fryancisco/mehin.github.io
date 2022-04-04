@@ -20,16 +20,20 @@ const CreateTranslate = () => {
 			form.addEventListener('submit', (ev) => {
 				ev.preventDefault();
 				const word = document.getElementById('traduzir').value || '';
+				const traducao = document.getElementById('traducao');
+				traducao.style = 'font-weight: bold;';
+
 				if(word) {
-					const translateWord = TranslateObj.translate(word) || '';
-					if(translateWord) {
-						const traducao = document.getElementById('traducao');
-						traducao.innerHTML = `${word} = ${translateWord}`;
-						traducao.style = 'font-weight: bold;';
+					const translateWord = TranslateObj.translate(word) || '';					
+
+					if(translateWord) {						
+						traducao.innerHTML = `${word} = ${translateWord}`;						
 					} else {
+						traducao.innerHTML = '';
 						alert('Palavra não encontrada no dicionário!');
 					}
 				} else {
+					traducao.innerHTML = '';
 					alert('Digite uma palavra em Canela!');
 				}
 			});
